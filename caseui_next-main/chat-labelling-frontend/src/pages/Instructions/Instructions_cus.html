@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Conversation Interface</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f5f5f5;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      //height: 100vh;
+    }
+
+    #app {
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      max-width: 600px;
+      padding: 20px;
+    }
+
+    .message-box {
+      margin-bottom: 10px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      background-color: #f9f9f9;
+    }
+    .message-box2 {
+      margin-bottom: 10px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      background-color: #ffffff;
+    }
+    .action-explanation {
+      font-weight: normal;
+      margin-bottom: 5px;
+    }
+
+    .action-tooltip {
+      font-size: 14px;
+      color: #3498db;
+      margin-left: 5px;
+    }
+
+    .response-box {
+      margin-top: 10px;
+    }
+
+    .finish-button {
+      background-color: #e74c3c;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      padding: 8px 15px;
+      cursor: pointer;
+      display: block;
+      margin: 0 auto; /* 居中对齐 */
+    }
+    h1 {
+      font-size: 34px;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+<div id="app">
+  <h1>操作说明</h1>
+  <div class="message-box2">
+    <p class="action-explanation">
+      感谢您同意参加此研究，您将扮演普通用户或系统角色进行对话。对话内容包括寻找一款产品（普通用户角色）或向用户推荐产品（系统角色）。附言：我们重视您的隐私。因此，我们将不会在此研究的任何手稿和其他公开材料上报告可识别的信息。
+    </p>
+  </div>
+  <div class="message-box2">
+    <p class="action-explanation">
+      您的角色：普通用户。
+    </p>
+    <p class="action-explanation">
+      要完成此研究，请按照以下步骤操作。
+    </p>
+    <div class="message-box">
+      <p class="action-explanation">
+        1. 我们想了解您的一些一般信息，因此，在对话开始前，请您填写关于人口信息的调查问卷，其中的问题包括性别、年龄和专业等。
+      </p>
+    </div>
+    <div class="message-box">
+      <p class="action-explanation">
+        2. 接下来，您将与系统进行对话。对话将由您发起。您需要首先选择一个“意图”，然后在“回复”中编写一条消息以发送给系统（通过单击“发送”按钮）。在选择“意图”时，您可以将鼠标悬停在“？”图标旁边的“意图”上以查看每个“意图”的解释。如果您想要在一轮中发送多条消息，请确保在发送消息之前选中“发送另一条消息”。
+      </p>
+    </div>
+    <div class="message-box">
+      <p class="action-explanation">
+        3. 在您发送消息后，请等待系统回复或向您推荐产品。在收到系统消息后，您可以重复第2步以继续对话。
+      </p>
+    </div>
+    <div class="message-box">
+      <p class="action-explanation">
+        4. 当您认为对话已经完成时，您可以单击“结束对话”以结束对话。
+      </p>
+    </div>
+    <div class="message-box">
+      <p class="action-explanation">
+        5. 在单击“结束对话”后，您需要<strong>评价对话中系统推荐的产品的与您目标产品的相关性</strong>。因此，请确保您了解推荐产品与您的目标产品的相关性。
+      </p>
+    </div>
+    <button class="finish-button" onclick="tosys()">我已阅读</button>
+  </div>
+</div>
+<script>
+  function tosys() {
+    // 在这里编写您的方法逻辑
+    const queryParams = new URLSearchParams(window.location.search);
+    const uuid = queryParams.get('uuid');
+    const user = queryParams.get('user');
+    window.location = '/index?_uuid=' + uuid + '&_user=' + user
+  }
+</script>
+</body>
+</html>

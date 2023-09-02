@@ -1,0 +1,76 @@
+{
+  "user": [
+    {
+      "title": "揭示",
+      "name": "揭示",
+      "tooltip": "通过揭示您的意图开始一次新的对话。"
+    },
+    {
+      "title": "修改",
+      "name": "修改",
+      "tooltip": "对您的意图进行更正。"
+    },
+    {
+      "title": "解释",
+      "name": "解释",
+      "tooltip": "回答一个澄清问题或对系统的产品推荐做出回应。"
+    },
+    {
+      "title": "询问",
+      "name": "询问",
+      "tooltip": "询问有关系统回应的信息。"
+    },
+    {
+      "title": "闲聊",
+      "name": "闲聊",
+      "tooltip": "问候系统。"
+    }
+  ],
+  "system": [
+    {
+      "title": "澄清",
+      "name": "澄清",
+      "tooltip": "选择一些建议的方向并向用户提出澄清问题。",
+      "children": [
+        {
+          "title": "是-否",
+          "name": "是-否",
+          "allowEmptySearch": true
+        },
+        {
+          "title": "选择",
+          "name": "选择",
+          "allowEmptySearch": true
+        },
+        {
+          "title": "开放",
+          "name": "开放",
+          "allowEmptySearch": true
+        }
+      ]
+    },
+    {
+      "title": "无答案",
+      "name": "无答案",
+      "tooltip": "无法找到用户想要的产品",
+      "allowEmptySearch": true
+    },
+    {
+      "title": "推荐",
+      "name": "推荐",
+      "tooltip": "向用户推荐一些产品。只有当您想要从搜索结果中推荐一些产品时才选择此选项。"
+    },
+    {
+      "title": "询问",
+      "name": "询问",
+      "tooltip": "询问关于用户回应的问题。",
+      "allowEmptySearch": true
+    },
+    {
+      "title": "闲聊",
+      "name": "闲聊",
+      "tooltip": "问候用户。",
+      "allowEmptySearch": true
+    }
+  ]
+}
