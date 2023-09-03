@@ -398,9 +398,7 @@ export default {
         }
         if (response.data.background) {
           this.$refs.chatUI.addMessage({
-            message: '<strong>您的角色: </strong>' + (this.role === 'sys' ? '系统. ' : '普通用户. ') + '<br/>' +
-              (this.role === 'cus' ? '<strong>Background: </strong>' + response.data.background + '<br/>' : '') +
-              '<strong>对话开始!</strong>' + '<br/>' + '注意: 由于需要在向您发送回应之前进行多个步骤，所以系统响应可能会有点慢，请耐心等待。',
+            message: '<strong>您的角色: </strong>' + (this.role === 'sys' ? '系统. ' : '普通用户. ') + '<br/>' + (this.role === 'cus' ? '<strong>Background: </strong>' + response.data.background + '<br/>' : '') + '<strong>对话开始!</strong>' + (this.role === 'cus' ? '<br/>' + '注意: 由于需要在向您发送回应之前进行多个步骤，所以系统响应可能会有点慢，请耐心等待。':''),
             time: new Date()
           }, 'other')
           if (this.role === 'cus') {
