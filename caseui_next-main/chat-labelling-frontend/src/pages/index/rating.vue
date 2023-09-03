@@ -1,8 +1,8 @@
 <template>
   <div style="width:800px; margin: 100px auto">
-    <h1 v-if="role === 'cus' && recommend_info.length !== 0" style="text-align: center">Product Relevance Check</h1>
+    <h1 v-if="role === 'cus' && recommend_info.length !== 0" style="text-align: center">产品相关性评价</h1>
     <p v-if="role === 'cus' && recommend_info.length !== 0" style="text-align: center; font-size: 14px; margin-bottom: 20px;">
-      Please evaluate whether the products recommended by the system are what you want (i.e., relevant).
+      请评估系统推荐的产品是否符合您的需求（是否相关）
     </p>
     <h1  v-if="role === 'sys'" style="text-align:center">请评价这次对话</h1>
     <Divider />
