@@ -169,7 +169,8 @@ async def search(query='ipod', refinements=''):
                 })
 
                 if display_name not in search['Aspects']:
-                    search['Aspects'].append(display_name)
+                    search['Aspects'].append(f'{display_name}: {ref["name"]}')
+        print(search['Aspects'])
         second = time.time()
         print(f"用时共计{second - first}")
         print(search)
