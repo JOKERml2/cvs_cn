@@ -25,7 +25,7 @@
         <strong slot="label">专业</strong>
         <RadioGroup v-model="formItem.majors">
           <Radio label="IR">信息检索</Radio>
-          <Radio label="CS other than IR">计算机科学（除信息检索）</Radio>
+          <Radio label="CS other than IR">计算机科学（除信息检索外）</Radio>
           <Radio label="Other">其它</Radio>
         </RadioGroup>
       </FormItem>

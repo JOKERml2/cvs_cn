@@ -68,7 +68,7 @@
         <Button @click="fdrawer=!fdrawer">显示过滤器选项</Button>
         <Button @click="searchDataWithFilters">使用带过滤器选项的搜索</Button>
       </FormItem>
-      <FormItem v-if="role==='sys'" label="操作" prop="action">
+      <FormItem v-if="role==='sys'" label="意图" prop="action">
         <customCascader
           :data="actions.system"
           v-model="formItem.action"
@@ -202,7 +202,7 @@ export default {
           required: true,
           validator: (rule, value, callback) => {
             if (!value || value.length === 0) {
-              return callback(new Error('请选择一项操作!'))
+              return callback(new Error('请选择一项意图!'))
             } else callback()
           },
           trigger: 'blur'
@@ -300,8 +300,8 @@ export default {
     finishConversation () {
       this.$emit('getRecommendInfo')
       this.$Modal.confirm({
-        title: 'Warning',
-        content: 'This will finish the conversation directly and <strong>not</strong> send your response to your partner. Do you want to continue?',
+        title: '警告！',
+        content: '您即将离开对话并且<strong>不会</strong>把您当前的回复内容发送给您的对话对象。是否继续？',
         onOk: () => {
           this.submitting = true// 发送数据之前禁止做任何修改
           this.finish({...this.formItem}, () => {

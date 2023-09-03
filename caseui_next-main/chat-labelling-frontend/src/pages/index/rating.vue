@@ -22,7 +22,7 @@
     </div>
     <div v-if="role === 'cus'">
       <h1 style="text-align:center">请评价这次对话</h1>
-      <h3>您已经成功获得您的目标产品了吗？</h3>
+      <h3>您认为系统是否成功向您推荐了您的目标产品？</h3>
       <RadioGroup v-model="cus_rate.anotheranswer">
         <Radio label="yes">是</Radio>
         <Radio label="no">否</Radio>
@@ -42,7 +42,7 @@
 <!--        </RadioGroup>-->
 <!--      </FormItem>-->
       <FormItem prop="goalUnderstand" v-if="role==='sys'">
-        <h3 slot="label">您认为您理解了用户的目标吗？</h3>
+        <h3 slot="label">您认为您理解了用户的目标产品意图吗？</h3>
         <RadioGroup v-model="formItem.goalUnderstand">
           <Radio label=1>是</Radio>
           <Radio label=0>否</Radio>
